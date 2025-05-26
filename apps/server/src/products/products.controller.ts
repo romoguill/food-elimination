@@ -7,12 +7,12 @@ export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
-  async createProduct(@Body() createProductRequest: CreateProductRequest) {
+  createProduct(@Body() createProductRequest: CreateProductRequest) {
     return this.productsService.createProduct(createProductRequest);
   }
 
   @Get()
-  async getProducts() {
+  getProducts() {
     return this.productsService.getProducts();
   }
 }
