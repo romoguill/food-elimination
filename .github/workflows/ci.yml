@@ -9,7 +9,7 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     env:
-      TURBOREPO_TOKEN: ${{ secrets.TURBOREPO_TOKEN }}
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ vars.TURBO_TEAM }}
     steps:
       - name: Check out code
