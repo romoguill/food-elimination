@@ -12,6 +12,10 @@ RUN npm i -g pnpm
 RUN pnpm i --frozen-lockfile
 
 FROM node:lts-alpine AS builder
+ARG TURBO_TEAM
+ENV TURBO_TEAM=${TURBO_TEAM}
+ARG TURBO_TOKEN
+ENV TURBO_TOKEN=${TURBO_TOKEN}}
 WORKDIR /app
 COPY --from=installer /app .
 COPY --from=pruner /app/out/full .
